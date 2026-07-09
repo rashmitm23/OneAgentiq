@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI SDR — Syntra</title>
+  <meta name="description" content="Your AI-Powered Sales Development Rep. Automate multi-channel outreach across calls, emails, LinkedIn & WhatsApp 24/7." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="sdr-page solution-page ai-sdr-page">
+
+  <!-- NAVBAR -->
+  <header class="nav-wrap">
+    <nav class="nav">
+      <a href="index.html" class="brand">
+        <span class="brand-logo">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 5C11 5 9.5 6.5 9.5 8.5C9.5 10.5 11.5 11.5 11.5 11.5C11.5 11.5 7.5 12.5 7.5 15C7.5 17 9 19 13 19"
+              stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6 5H9.5" stroke="white" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </span>
+        <span>Enterprise AI</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">About</a></li>
+        <li class="nav-has-dropdown">
+          <a href="#" class="nav-dropdown-toggle">Solutions <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="display:inline-block;vertical-align:middle;margin-left:3px"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <ul class="nav-dropdown">
+            <li><a href="ai-sdr.html">AI SDR <span class="nav-live-pill">Live</span></a></li>
+            <li><a href="ai-chatbot.html">AI Chatbot <span class="nav-live-pill">Live</span></a></li>
+            <li><a href="invoice-processing.html">Invoice Processing <span class="nav-live-pill">Live</span></a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary" style="padding: 10px 22px;">Get Started</a>
+      </div>
+      <button class="nav-toggle" aria-label="Menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav-mobile" id="navMobile">
+      <a href="index.html">About</a>
+      <a href="#">Solutions</a>
+      <a href="ai-sdr.html" style="padding-left:20px;font-size:13px">AI SDR <span class="nav-live-pill">Live</span></a>
+      <a href="ai-chatbot.html" style="padding-left:20px;font-size:13px">AI Chatbot <span class="nav-live-pill">Live</span></a>
+      <a href="invoice-processing.html" style="padding-left:20px;font-size:13px">Invoice Processing <span class="nav-live-pill">Live</span></a>
+      <a href="contact.html">Contact Us</a>
+      <a href="contact.html" class="btn btn-primary">Get Started</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="sdr-hero reveal">
+    <div class="container">
+      <div class="sdr-hero-stage">
+        <svg class="sdr-hero-orbit" viewBox="0 0 900 420" aria-hidden="true">
+          <ellipse cx="450" cy="210" rx="400" ry="175" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 9" />
+        </svg>
+
+        <div class="sdr-hero-icon sdr-hero-icon--phone sdr-icon-float" style="--float-delay: 0s" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </div>
+        <div class="sdr-hero-icon sdr-hero-icon--email sdr-icon-float" style="--float-delay: 1.2s" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/>
+          </svg>
+        </div>
+        <div class="sdr-hero-icon sdr-hero-icon--linkedin sdr-icon-float" style="--float-delay: 0.6s" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 4.126 0 2.063 2.063 0 0 1-2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </div>
+        <div class="sdr-hero-icon sdr-hero-icon--whatsapp sdr-icon-float" style="--float-delay: 1.8s" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.435 9.884-9.882 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+          </svg>
+        </div>
+
+        <div class="sdr-hero-inner">
+          <div class="aurora-blob"></div>
+          <div class="chip"><span class="chip-dot"></span> AI SDR &nbsp;·&nbsp; Sales Automation</div>
+          <h1 class="sdr-hero-h1">Your AI-Powered<br><span>Sales Development Rep</span></h1>
+          <p class="sdr-hero-sub">Automate multi-channel outreach across calls, emails, LinkedIn &amp; WhatsApp. AI SDR handles prospecting, follow-ups, and CRM updates — 24/7.</p>
+          <div class="sdr-hero-btns">
+            <a href="contact.html" class="btn btn-primary">Request a Demo &nbsp;→</a>
+            <a href="#how-it-works" class="btn btn-ghost">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              See How It Works
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY CAPABILITIES -->
+  <section class="section sdr-caps-section reveal" style="padding-bottom: 50px;">
+    <div class="container">
+      <div class="section-head sdr-caps-ref-head">
+        <div class="chip"><span class="chip-dot"></span> Features</div>
+        <h2 class="h2">Key Capabilities</h2>
+        <p class="sdr-caps-sub">Everything you need to automate and scale outreach</p>
+      </div>
+
+      <div class="sdr-caps-showcase">
+        <article class="sdr-caps-showcase-card sdr-caps-showcase-card--1">
+          <img src="images/1st.png" alt="AI SDR capability preview 1" loading="lazy">
+        </article>
+        <article class="sdr-caps-showcase-card sdr-caps-showcase-card--2">
+          <img src="images/2nd.png" alt="AI SDR capability preview 2" loading="lazy">
+        </article>
+        <article class="sdr-caps-showcase-card sdr-caps-showcase-card--3">
+          <img src="images/3rd.png" alt="AI SDR capability preview 3" loading="lazy">
+        </article>
+        <article class="sdr-caps-showcase-card sdr-caps-showcase-card--4">
+          <img src="images/4th.png" alt="AI SDR capability preview 4" loading="lazy">
+        </article>
+      </div>
+
+      <div class="sdr-caps-list">
+        <div class="sdr-caps-list-item">
+          <div class="sdr-caps-list-ico sdr-caps-list-ico--orange">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
+          <div class="sdr-caps-list-copy">
+            <h4>AI-Powered Calling</h4>
+            <p>Inbound and outbound calls handled by AI with natural conversation, rejection handling, and meeting scheduling.</p>
+          </div>
+        </div>
+
+        <div class="sdr-caps-list-item">
+          <div class="sdr-caps-list-ico sdr-caps-list-ico--purple">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/>
+            </svg>
+          </div>
+          <div class="sdr-caps-list-copy">
+            <h4>Email Sequences</h4>
+            <p>Automated personalized email campaigns with smart follow-up timing and A/B testing.</p>
+          </div>
+        </div>
+
+        <div class="sdr-caps-list-item">
+          <div class="sdr-caps-list-ico sdr-caps-list-ico--blue">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 4.126 0 2.063 2.063 0 0 1-2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </div>
+          <div class="sdr-caps-list-copy">
+            <h4>LinkedIn Outreach</h4>
+            <p>Automated connection requests, messaging sequences, and profile engagement.</p>
+          </div>
+        </div>
+
+        <div class="sdr-caps-list-item">
+          <div class="sdr-caps-list-ico sdr-caps-list-ico--green">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.435 9.884-9.882 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+            </svg>
+          </div>
+          <div class="sdr-caps-list-copy">
+            <h4>WhatsApp Integration</h4>
+            <p>Reach prospects on WhatsApp with automated yet personal conversations.</p>
+          </div>
+        </div>
+
+        <div class="sdr-caps-list-item">
+          <div class="sdr-caps-list-ico sdr-caps-list-ico--pink">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </div>
+          <div class="sdr-caps-list-copy">
+            <h4>Smart Scheduling</h4>
+            <p>AI books meetings directly into your calendar, handling timezone and availability logic.</p>
+          </div>
+        </div>
+
+        <div class="sdr-caps-list-item">
+          <div class="sdr-caps-list-ico sdr-caps-list-ico--teal">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/>
+              <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4-4.64 4.36A9 9 0 0 1 3.51 15"/>
+            </svg>
+          </div>
+          <div class="sdr-caps-list-copy">
+            <h4>CRM Auto-Sync</h4>
+            <p>Every interaction is automatically logged in your CRM with full context and next steps.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section sdr-setup-section reveal" id="how-it-works">
+    <div class="container">
+      <div class="section-head sdr-setup-head">
+        <div class="chip"><span class="chip-dot"></span> Simple Steps</div>
+        <h2 class="h2">MILA works. You close.</h2>
+        <p class="sdr-setup-sub">Four steps. Zero manual effort.</p>
+      </div>
+
+      <div class="sdr-setup-split">
+        <div class="sdr-setup-visual">
+          <img src="images/setup-image.png" alt="AI SDR setup preview" class="sdr-setup-visual-img">
+        </div>
+
+        <div class="sdr-setup-stepper" id="sdrSetupStepper">
+          <div class="sdr-setup-stepper-list">
+            <div class="sdr-setup-step-item" data-step="0">
+              <div class="sdr-setup-step-rail" aria-hidden="true">
+                <span class="sdr-setup-rail-seg"></span>
+              </div>
+              <div class="sdr-setup-step-ico">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                  <polyline points="12 16 12 12"/><polyline points="9 12 12 9 15 12"/>
+                </svg>
+              </div>
+              <div class="sdr-setup-step-copy">
+                <h3>Only the right leads, every time.</h3>
+                <p>MILA filters out opted-out and bad-fit contacts before a single message is sent — keeping your brand safe and your pipeline clean.</p>
+              </div>
+            </div>
+
+            <div class="sdr-setup-step-item" data-step="1">
+              <div class="sdr-setup-step-rail" aria-hidden="true">
+                <span class="sdr-setup-rail-seg"></span>
+              </div>
+              <div class="sdr-setup-step-ico">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="3"/>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                </svg>
+              </div>
+              <div class="sdr-setup-step-copy">
+                <h3>Messages so personal, they'll think you wrote it.</h3>
+                <p>Every message built from LinkedIn, news, and social research — from scratch. Not a template. Not a merge tag.</p>
+              </div>
+            </div>
+
+            <div class="sdr-setup-step-item" data-step="2">
+              <div class="sdr-setup-step-rail" aria-hidden="true">
+                <span class="sdr-setup-rail-seg"></span>
+              </div>
+              <div class="sdr-setup-step-ico">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.05-2.91a2.18 2.18 0 0 0-2.91-.05z"/>
+                  <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+                  <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+                  <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+                </svg>
+              </div>
+              <div class="sdr-setup-step-copy">
+                <h3>Inbox. Not spam. Every time.</h3>
+                <p>97% deliverability. Domain warming built-in. Your sender reputation protected — even at high volume.</p>
+              </div>
+            </div>
+
+            <div class="sdr-setup-step-item" data-step="3">
+              <div class="sdr-setup-step-rail" aria-hidden="true">
+                <span class="sdr-setup-rail-seg"></span>
+              </div>
+              <div class="sdr-setup-step-ico">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+              </div>
+              <div class="sdr-setup-step-copy">
+                <h3>Wake up to meetings, not to-do lists.</h3>
+                <p>Qualified prospects booked straight to your calendar, 24/7. CRM synced automatically. No manual effort.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USE CASES -->
+  <section class="section sdr-use-section reveal">
+    <div class="container">
+      <div class="section-head">
+        <div class="chip"><span class="chip-dot"></span> Use Cases</div>
+        <h2 class="h2 sdr-use-title">Built For <span class="sdr-use-gradient">Real Scenarios</span></h2>
+      </div>
+
+      <div class="sdr-use-grid">
+
+        <article class="sdr-use-step sdr-use-step--orange">
+          <div class="sdr-use-icon-wrap">
+            <div class="sdr-use-glow"></div>
+            <div class="sdr-use-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="sdr-use-body">
+            <h3>Outbound Prospecting</h3>
+            <p>Launch personalized outreach campaigns across calls, email, LinkedIn, and WhatsApp to engage prospects and generate qualified opportunities.</p>
+          </div>
+        </article>
+
+        <article class="sdr-use-step sdr-use-step--purple">
+          <div class="sdr-use-icon-wrap">
+            <div class="sdr-use-glow"></div>
+            <div class="sdr-use-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="sdr-use-body">
+            <h3>Inbound Lead Qualification</h3>
+            <p>Respond instantly to inbound inquiries, qualify leads through AI conversations, and route high-intent prospects to the right sales teams.</p>
+          </div>
+        </article>
+
+        <article class="sdr-use-step sdr-use-step--blue">
+          <div class="sdr-use-icon-wrap">
+            <div class="sdr-use-glow"></div>
+            <div class="sdr-use-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </div>
+          </div>
+          <div class="sdr-use-body">
+            <h3>Meeting Scheduling</h3>
+            <p>Automate meeting booking, calendar coordination, and invite generation to reduce friction and accelerate the sales cycle.</p>
+          </div>
+        </article>
+
+        <article class="sdr-use-step sdr-use-step--green">
+          <div class="sdr-use-icon-wrap">
+            <div class="sdr-use-glow"></div>
+            <div class="sdr-use-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
+              </svg>
+            </div>
+          </div>
+          <div class="sdr-use-body">
+            <h3>Lead Nurturing &amp; Follow-Ups</h3>
+            <p>Maintain continuous engagement through automated follow-up sequences, ensuring no opportunity is missed and every lead is nurtured effectively.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="section sdr-why-section reveal">
+    <div class="container">
+      <div class="sdr-why-split">
+        <div class="sdr-why-intro">
+          <div class="chip"><span class="chip-dot"></span> Benefits</div>
+          <h2 class="h2 sdr-why-title">Why Choose This Solution</h2>
+          <p class="sdr-why-intro-desc">Scale outbound sales without adding headcount to your team.<br>
+            Automate multi-channel outreach across calls, emails, LinkedIn &amp; WhatsApp.<br>
+            Access 300M+ verified contacts with seamless CRM integration.<br>
+            Track pipeline performance in real time while reducing meeting costs by 60%.</p>
+        </div>
+
+        <div class="sdr-why-marquee-wrap">
+          <div class="sdr-why-marquee-rings" aria-hidden="true"></div>
+          <div class="sdr-why-marquee">
+            <div class="sdr-why-marquee-col sdr-why-marquee-col--down">
+              <div class="sdr-why-marquee-track">
+                <article class="sdr-why-card">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--orange">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--orange">10x</strong>
+                    <p>10x more outreach without additional headcount</p>
+                  </div>
+                </article>
+                <article class="sdr-why-card">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--purple">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--purple">300M+</strong>
+                    <p>Access to 300M+ verified contact profiles</p>
+                  </div>
+                </article>
+                <article class="sdr-why-card">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--blue">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--blue">Seamless</strong>
+                    <p>Seamless CRM integration with auto-logging</p>
+                  </div>
+                </article>
+                <article class="sdr-why-card">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--red">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--red">60%</strong>
+                    <p>Reduce cost per qualified meeting by 60%</p>
+                  </div>
+                </article>
+                <article class="sdr-why-card" aria-hidden="true">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--orange">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--orange">10x</strong>
+                    <p>10x more outreach without additional headcount</p>
+                  </div>
+                </article>
+                <article class="sdr-why-card" aria-hidden="true">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--purple">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--purple">300M+</strong>
+                    <p>Access to 300M+ verified contact profiles</p>
+                  </div>
+                </article>
+                <article class="sdr-why-card" aria-hidden="true">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--blue">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--blue">Seamless</strong>
+                    <p>Seamless CRM integration with auto-logging</p>
+                  </div>
+                </article>
+                <article class="sdr-why-card" aria-hidden="true">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--red">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--red">60%</strong>
+                    <p>Reduce cost per qualified meeting by 60%</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="sdr-why-marquee-col sdr-why-marquee-col--up">
+              <div class="sdr-why-marquee-track">
+                <article class="sdr-why-card">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--red">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--red">73.5%</strong>
+                    <p>73.5% call success rate with AI conversations</p>
+                  </div>
+                </article>
+                <article class="sdr-why-card">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--green">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--green">24/7</strong>
+                    <p>24/7 automated prospecting and follow-ups</p>
+                  </div>
+                </article>
+                <article class="sdr-why-card">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--violet">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--violet">Multi-Channel</strong>
+                    <p>Multi-channel calls, email, LinkedIn, WhatsApp</p>
+                  </div>
+                </article>
+                <article class="sdr-why-card">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--indigo">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--indigo">Real-time</strong>
+                    <p>Real-time analytics and performance dashboards</p>
+                  </div>
+                </article>
+                <article class="sdr-why-card" aria-hidden="true">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--red">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--red">73.5%</strong>
+                    <p>73.5% call success rate with AI conversations</p>
+                  </div>
+                </article>
+                <article class="sdr-why-card" aria-hidden="true">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--green">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--green">24/7</strong>
+                    <p>24/7 automated prospecting and follow-ups</p>
+                  </div>
+                </article>
+                <article class="sdr-why-card" aria-hidden="true">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--violet">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--violet">Multi-Channel</strong>
+                    <p>Multi-channel calls, email, LinkedIn, WhatsApp</p>
+                  </div>
+                </article>
+                <article class="sdr-why-card" aria-hidden="true">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--indigo">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--indigo">Real-time</strong>
+                    <p>Real-time analytics and performance dashboards</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section reveal">
+    <div class="container">
+      <div class="cta-glow-wrap">
+        <div class="cta-card">
+          <h2 class="cta-heading">Ready to Get Started?</h2>
+          <p class="cta-sub">See how this solution can transform your operations with a personalized demo.</p>
+          <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+            <a href="contact.html" class="btn btn-primary cta-btn">Request a Demo &nbsp;→</a>
+            <a href="contact.html" class="btn btn-ghost cta-btn">Talk to Sales</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="company">
+    <div class="container">
+      <div class="foot-grid">
+        <!-- Brand col -->
+        <div class="foot-brand">
+          <a href="index.html" class="brand foot-brand-link">
+            <span class="brand-logo">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M3 3h6v6H3zM11 3h6v4h-6zM11 9h6v8h-4v-4h-2z" fill="#fff" />
+              </svg>
+            </span>
+            <span>Enterprise AI</span>
+          </a>
+          <p class="foot-desc">Enterprise AI is designed to revolution<br>how businesses operate.</p>
+          <div class="foot-socials">
+            <a href="#" class="foot-social" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="#" class="foot-social" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zm2-6a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" />
+              </svg>
+            </a>
+            <a href="#" class="foot-social" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r=".5" fill="currentColor" />
+              </svg>
+            </a>
+            <a href="#" class="foot-social" aria-label="Telegram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- Info -->
+        <div class="foot-col">
+          <h5 class="foot-col-title">Info</h5>
+          <a href="index.html">About Us</a>
+          <a href="#features">Features</a>
+        </div>
+        <!-- Resources -->
+        <div class="foot-col">
+          <h5 class="foot-col-title">Resources</h5>
+          <a href="contact.html">Contact Us</a>
+        </div>
+        <!-- Company -->
+        <div class="foot-col">
+          <h5 class="foot-col-title">Company</h5>
+          <a href="#">Privacy policy</a>
+          <a href="#">Terms conditions</a>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>&copy; 2026 Enterprise AI. All rights reserved</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
