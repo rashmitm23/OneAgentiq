@@ -3350,15 +3350,17 @@ ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 36px 40px;
+  align-items: stretch;
 }
 .ai-sdr-page .sdr-caps-list-item {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto 1fr;
   column-gap: 10px;
   row-gap: 10px;
-  align-items: center;
+  align-items: start;
   opacity: 0;
+  height: 100%;
 }
 .ai-sdr-page .sdr-caps-list-ico {
   grid-row: 1;
@@ -3372,6 +3374,7 @@ ul {
   flex-shrink: 0;
   border: none;
   color: #fff;
+  align-self: center;
 }
 .ai-sdr-page .sdr-caps-list-ico svg {
   width: 12px;
@@ -3405,6 +3408,7 @@ ul {
   color: #6b7280;
   line-height: 1.65;
   margin: 0;
+  min-height: calc(1.65em * 3);
 }
 .ai-sdr-page .sdr-caps-section.in .sdr-caps-list-item {
   animation: sdr-caps-list-fade 0.9s ease forwards;
@@ -3791,9 +3795,18 @@ ul {
   z-index: 0;
   transition: opacity .55s ease;
 }
-.ai-sdr-page .sdr-setup-step-ico svg {
+.ai-sdr-page .sdr-setup-step-ico svg,
+.ai-sdr-page .sdr-setup-step-num {
   position: relative;
   z-index: 1;
+}
+.ai-sdr-page .sdr-setup-step-num {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -.02em;
+  color: inherit;
 }
 .ai-sdr-page .sdr-setup-section.is-stepping .sdr-setup-step-item:nth-child(1) .sdr-setup-step-ico::before {
   animation: sdr-setup-ico-1 10s ease infinite;
@@ -5580,4 +5593,63 @@ ul {
 
 .required-mark {
   color: red;
+}
+
+/* === Legal / Privacy Policy page === */
+.legal-container {
+  max-width: 920px;
+}
+
+.legal-content {
+  padding-bottom: 80px;
+}
+
+.legal-body {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.legal-body h2 {
+  margin: 2.25rem 0 0.75rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.legal-body h2:first-child {
+  margin-top: 0;
+}
+
+.legal-body p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.legal-body ul {
+  list-style: disc;
+  margin: 0 0 1rem;
+  padding-left: 1.35rem;
+}
+
+.legal-body li {
+  margin-bottom: 0.45rem;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.legal-body a {
+  color: var(--primary-2);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.legal-body a:hover {
+  opacity: 0.85;
 }
