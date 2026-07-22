@@ -49,7 +49,7 @@ if ($msg !== '' && strlen($msg) > 1000) {
 if (!empty($errors)) {
     echo json_encode([
         'status'  => 'error',
-        'message' => 'Please fix the highlighted fields.',
+        'message' => 'Please fill the highlighted fields correctly.',
         'errors'  => $errors
     ]);
     exit;

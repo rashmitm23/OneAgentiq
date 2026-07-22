@@ -4,6 +4,14 @@ const m = document.getElementById('navMobile');
 if (t) t.addEventListener('click', () => m.classList.toggle('open'));
 m && m.querySelectorAll('a').forEach(a => a.addEventListener('click', () => m.classList.remove('open')));
 
+document.querySelectorAll('.nav-mobile-dropdown-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const wrap = btn.closest('.nav-mobile-dropdown');
+    const open = wrap.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+});
+
 // Active nav link for current page
 (function () {
   const currentPage = window.location.pathname.split("/").pop() || "index.html";
@@ -15,6 +23,7 @@ m && m.querySelectorAll('a').forEach(a => a.addEventListener('click', () => m.cl
   }
 
   document.querySelectorAll(".nav-links a, .nav-mobile a").forEach((link) => {
+    if (link.classList.contains("btn")) return;
     const target = pageFromHref(link.getAttribute("href"));
     if (target && target === currentPage) {
       link.classList.add("active");
@@ -22,7 +31,7 @@ m && m.querySelectorAll('a').forEach(a => a.addEventListener('click', () => m.cl
   });
 
   if (solutionPages.includes(currentPage)) {
-    document.querySelectorAll(".nav-dropdown-toggle").forEach((link) => {
+    document.querySelectorAll(".nav-dropdown-toggle, .nav-mobile-dropdown-toggle").forEach((link) => {
       link.classList.add("active");
     });
   }
@@ -33,16 +42,14 @@ const isSdrPage = document.body.classList.contains('sdr-page') || document.body.
 
 const io = new IntersectionObserver((entries) => {
   entries.forEach(e => {
-    if (isSdrPage) {
-      e.target.classList.toggle('in', e.isIntersecting);
-    } else if (e.isIntersecting) {
+    if (e.isIntersecting) {
       e.target.classList.add('in');
       io.unobserve(e.target);
     }
   });
 }, {
-  threshold: isSdrPage ? 0.14 : 0.12,
-  rootMargin: isSdrPage ? '0px 0px -6% 0px' : '0px'
+  threshold: isSdrPage ? 0.12 : 0.12,
+  rootMargin: isSdrPage ? '0px 0px -4% 0px' : '0px'
 });
 
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
@@ -62,7 +69,11 @@ if (isSdrPage) {
   const track = document.getElementById('wsCarousel');
   if (!track) return;
   const cards = track.querySelectorAll('.ws-card');
-  const visibleCount = () => window.innerWidth <= 920 ? 2 : 3;
+  const visibleCount = () => {
+    if (window.innerWidth <= 560) return 1;
+    if (window.innerWidth <= 920) return 2;
+    return 3;
+  };
   let current = 0;
 
   function maxIndex() { return cards.length - visibleCount(); }

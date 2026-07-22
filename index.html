@@ -50,10 +50,17 @@
     </nav>
     <div class="nav-mobile" id="navMobile">
       <a href="index.html">About</a>
-      <a href="#">Solutions</a>
-      <a href="ai-sdr.html" style="padding-left:20px;font-size:13px">AI SDR <span class="nav-live-pill">Live</span></a>
-      <a href="ai-chatbot.html" style="padding-left:20px;font-size:13px">AI Chatbot <span class="nav-live-pill">Live</span></a>
-      <a href="invoice-processing.html" style="padding-left:20px;font-size:13px">Invoice Processing <span class="nav-live-pill">Live</span></a>
+      <div class="nav-mobile-dropdown">
+        <button type="button" class="nav-mobile-dropdown-toggle" aria-expanded="false">
+          Solutions
+          <svg class="nav-mobile-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-mobile-dropdown-panel">
+          <a href="ai-sdr.html">AI SDR <span class="nav-live-pill">Live</span></a>
+          <a href="ai-chatbot.html">AI Chatbot <span class="nav-live-pill">Live</span></a>
+          <a href="invoice-processing.html">Invoice Processing <span class="nav-live-pill">Live</span></a>
+        </div>
+      </div>
       <a href="contact.html">Contact Us</a>
       <a href="contact.html" class="btn btn-primary">Get Started</a>
     </div>
@@ -202,7 +209,7 @@
   </section>
 
   <!-- WHY SYNTRA -->
-  <section class="section why-syntra reveal">
+  <section class="section why-syntra reveal" id="how-it-works">
     <div class="container">
       <div class="why-syntra-header">
         <div class="why-syntra-left">
@@ -374,7 +381,7 @@
         <!-- Left -->
         <div class="integ-left">
           <h2 class="integ-heading">Connect 250+ Favorite Tools</h2>
-          <p class="integ-desc">Let's you link all your apps for seamless workflows and smooth task management</p>
+          <p class="integ-desc">Lets you link all your apps for seamless workflows and smooth task management</p>
         </div>
         <!-- Right: marquee rows -->
         <div class="integ-right">
@@ -613,7 +620,7 @@
           <div class="why-body">
             <div class="why-text">
               <p class="why-overline">ALWAYS EVOLVING</p>
-              <h3 class="h3 light">YOneAgentiq stays ahead <br> as AI evolves.</h3>
+              <h3 class="h3 light">OneAgentiq stays ahead <br> as AI evolves.</h3>
               <p class="sub light">We monitor, fine-tune, and optimize long after launch. LLM agnostic by design — as better models emerge, OneAgentiq adapts automatically.</p>
               <ul class="why-bullets">
                 <li>Continuous monitoring & optimization</li>
@@ -846,7 +853,7 @@
   </section> -->
 
   <!-- FAQ -->
-  <section class="section faq-section reveal">
+  <section class="section faq-section reveal" id="faq">
     <div class="container narrow">
       <div class="faq-head">
         <div class="faq-label">
@@ -972,7 +979,9 @@
             <span>OneAgentiq</span>
           </a>
           <p class="foot-desc">OneAgentiq is designed to revolution<br>how businesses operate.</p>
-          <div class="foot-socials">
+          <!--
+
+                    <div class="foot-socials">
             <a href="#" class="foot-social" aria-label="Facebook">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
@@ -998,12 +1007,16 @@
               </svg>
             </a>
           </div>
+
+          -->
         </div>
         <!-- Info -->
         <div class="foot-col">
           <h5 class="foot-col-title">Info</h5>
           <a href="index.html">About Us</a>
           <a href="#features">Features</a>
+          <a href="#how-it-works">How it Works</a>
+          <a href="#faq">FAQ</a>
         </div>
         <!-- Solutions -->
         <div class="foot-col">
