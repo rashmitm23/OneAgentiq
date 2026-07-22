@@ -439,7 +439,7 @@ document.querySelectorAll('.faq-item').forEach(item => {
     responseDiv.style.color = "";
 
     if (!validateForm()) {
-      responseDiv.textContent = "Please fix the highlighted fields.";
+      responseDiv.textContent = "Please fill the highlighted fields.";
       responseDiv.style.color = "#e53935";
       return;
     }
