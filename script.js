@@ -275,15 +275,16 @@ document.querySelectorAll('.faq-item').forEach(item => {
 (function () {
   if (!document.body.classList.contains('ai-sdr-page')) return;
   const section = document.querySelector('.sdr-setup-section');
-  if (!section) return;
+  const target = document.getElementById('sdrSetupStepper') || section;
+  if (!section || !target) return;
 
   const stepperIo = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       section.classList.toggle('is-stepping', entry.isIntersecting);
     });
-  }, { threshold: 0.3 });
+  }, { threshold: 0.15, rootMargin: '0px 0px -10% 0px' });
 
-  stepperIo.observe(section);
+  stepperIo.observe(target);
 })();
 
 
