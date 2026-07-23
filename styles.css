@@ -19,7 +19,22 @@
 
 
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a,
+[role="button"] {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid rgba(15, 17, 21, 0.35);
+  outline-offset: 2px;
 }
 
 html {
@@ -1212,13 +1227,17 @@ ul {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-      background: var(--primary);
-    border: 1px solid var(--primary);
+  background: var(--primary);
+  border: 1px solid var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background .2s
+  transition: background .2s;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
 }
 
 @media (max-width: 920px) {
@@ -1409,6 +1428,16 @@ ul {
   cursor: pointer;
   transition: border-color .15s, background .15s, transform .15s;
   flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+.case-slider-arrow:focus,
+.case-slider-arrow:active {
+  outline: none;
+  background: #fafafa;
 }
 
 .case-slider-arrow:hover {
