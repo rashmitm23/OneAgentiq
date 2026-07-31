@@ -3277,7 +3277,7 @@ ul {
 /* Contact info top row */
 .contact-top-row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-bottom: 24px;
 }
