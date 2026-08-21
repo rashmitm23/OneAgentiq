@@ -11,6 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=20260727b" />
+  <link rel="stylesheet" href="chatbot/chatbot.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 
 <body class="contact-page legal-page">
@@ -191,6 +193,20 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script>
+    window.CHATBOT_CONFIG = {
+      apiUrl: 'api/attachment.php',
+      voiceBootstrapUrl: 'api/voice_bootstrap.php',
+      voiceApiBase: 'https://voice.oneagentiq.com',
+      agentId: 'vc_agent_fcf07ddb25054de0',
+      echoCancellation: true,
+      clientJsUrl: 'https://voice.oneagentiq.com/voice-chat/client.js',
+      botName: 'OneAgentiq',
+      personName: 'ME'
+    };
+  </script>
+  <script src="chatbot/embed.js"></script>
 </body>
 
 </html>

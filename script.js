@@ -480,3 +480,11 @@ document.querySelectorAll('.faq-item').forEach(item => {
     btn.innerText = "Book a Demo →";
   });
 })();
+
+
+
+// ===== chatbot js ======
+
+
+
+// ===== chatbot js ======

@@ -3,7 +3,10 @@
 <title>Product — Syntra</title>
 <meta name="description" content="Explore Syntra — AI insights, automations, and copilot built for modern teams."/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20260727b"/></head><body>
+<link rel="stylesheet" href="styles.css?v=20260727b"/>
+<link rel="stylesheet" href="chatbot/chatbot.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head><body>
 
 <header class="nav-wrap"><nav class="nav">
   <a href="index.html" class="brand"><span class="brand-logo"><img src="images/OneAgentiq-logo.jpg?v=20260724" alt="OneAgentiq"></span></a>
@@ -82,4 +85,19 @@
   <div><h5>Company</h5><a href="company.html">About</a><a href="contact.html">Contact</a></div>
   <div><h5>Legal</h5><a href="privacy-policy.html">Privacy</a><a href="terms-conditions.html">Terms</a></div>
 </div><div class="container foot-bottom"><span class="muted small">© 2026 OneAgentiq. All rights reserved</span><span class="muted small">Made with care.</span></div></footer>
-<script src="script.js"></script></body></html>
+<script src="script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+  window.CHATBOT_CONFIG = {
+    apiUrl: 'api/attachment.php',
+    voiceBootstrapUrl: 'api/voice_bootstrap.php',
+    voiceApiBase: 'https://voice.oneagentiq.com',
+    agentId: 'vc_agent_fcf07ddb25054de0',
+    echoCancellation: true,
+    clientJsUrl: 'https://voice.oneagentiq.com/voice-chat/client.js',
+    botName: 'OneAgentiq',
+    personName: 'ME'
+  };
+</script>
+<script src="chatbot/embed.js"></script>
+</body></html>
