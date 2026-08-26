@@ -477,7 +477,7 @@ document.querySelectorAll('.faq-item').forEach(item => {
     }
 
     btn.disabled = false;
-    btn.innerText = "Book a Demo →";
+    btn.innerHTML = "Book a Demo &rarr;";
   });
 })();
 

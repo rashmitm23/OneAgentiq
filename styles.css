@@ -895,8 +895,13 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 18px;
+  color: var(--primary);
   margin-bottom: 14px
+}
+
+.ico i {
+  line-height: 1
 }
 
 .card h3 {
@@ -1817,13 +1822,19 @@ ul {
 }
 
 .why-bullets li::before {
-  content: "";
+  content: "\2713";
   width: 18px;
   height: 18px;
   min-width: 18px;
   border-radius: 50%;
   border: 1.5px solid rgba(130, 110, 255, .7);
-  display: inline-block
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  color: rgba(180, 165, 255, .95);
+  line-height: 1
 }
 
 .why-stat-card {
