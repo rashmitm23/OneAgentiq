@@ -1,7 +1,0 @@
-RewriteEngine On
-
-# Prefer clean blog post URL
-RewriteRule ^blog-detail\.html$ blogs/microsoft-setup-mila/ [R=301,L]
-
-# Optional: /blogs -> listing
-RewriteRule ^blogs/?$ blog.html [R=302,L]
