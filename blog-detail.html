@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Microsoft Setup Can Do More With MILA — OneAgentiq Blog</title>
+  <meta name="description" content="MILA, the AI SDR from One Agentic, works across Outlook, Dynamics 365, Microsoft Calendar, and Azure OpenAI using the Microsoft stack you already rely on." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260826j" />
+  <link rel="stylesheet" href="chatbot/chatbot.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body class="blog-page blog-detail-page">
+
+  <!-- NAVBAR -->
+  <header class="nav-wrap">
+    <nav class="nav">
+      <a href="index.html" class="brand">
+        <span class="brand-logo">
+          <img src="images/OneAgentiq-logo.jpg?v=20260724" alt="OneAgentiq">
+        </span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">About</a></li>
+        <li class="nav-has-dropdown">
+          <a href="#" class="nav-dropdown-toggle">Solutions <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="display:inline-block;vertical-align:middle;margin-left:3px"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <ul class="nav-dropdown">
+            <li><a href="ai-sdr.html">AI SDR <span class="nav-live-pill">Live</span></a></li>
+            <li><a href="ai-chatbot.html">AI Chatbot <span class="nav-live-pill">Live</span></a></li>
+            <li><a href="invoice-processing.html">Invoice Processing <span class="nav-live-pill">Live</span></a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary" style="padding: 10px 22px;">Get Started</a>
+      </div>
+      <button class="nav-toggle" aria-label="Menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav-mobile" id="navMobile">
+      <a href="index.html">About</a>
+      <div class="nav-mobile-dropdown">
+        <button type="button" class="nav-mobile-dropdown-toggle" aria-expanded="false">
+          Solutions
+          <svg class="nav-mobile-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-mobile-dropdown-panel">
+          <a href="ai-sdr.html">AI SDR <span class="nav-live-pill">Live</span></a>
+          <a href="ai-chatbot.html">AI Chatbot <span class="nav-live-pill">Live</span></a>
+          <a href="invoice-processing.html">Invoice Processing <span class="nav-live-pill">Live</span></a>
+        </div>
+      </div>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="contact.html" class="btn btn-primary">Get Started</a>
+    </div>
+  </header>
+
+  <!-- BANNER -->
+  <section class="blog-detail-banner reveal">
+    <div class="blog-detail-banner-bg" style="background-image: url('images/blog-microsoft-setup-banner.png');" role="img" aria-label="MILA integrated with Microsoft ecosystem"></div>
+    <div class="container">
+      <div class="blog-detail-banner-content">
+        <a href="blog.html" class="blog-back blog-back--light">← Back to Blog</a>
+        <div class="blog-banner-tag-row">
+          <span class="blog-tag blog-tag--light">AI SDR · Microsoft</span>
+        </div>
+        <h1>Your Microsoft Setup Can Do More With MILA. Here's How.</h1>
+      </div>
+    </div>
+  </section>
+
+  <article class="blog-article blog-article--detail">
+    <div class="container blog-article-wrap">
+      <div class="blog-article-content reveal">
+        <p>Most businesses running on Microsoft already have a well-connected ecosystem. Outlook handles communication. Dynamics 365 holds the customer relationships. Microsoft 365 keeps calendars and scheduling in sync. Individually, each tool is powerful. Together, they run the day-to-day.</p>
+
+        <p>What that stack does not do on its own is drive outbound sales. The leads sit in Dynamics. The outreach depends on someone in Outlook. The follow-ups happen when there is time. The connective tissue between "we have a lead" and "we booked the meeting" is still mostly manual.</p>
+
+        <p>MILA, the AI Sales Development Representative from One Agentic, works across that stack – using the same Microsoft infrastructure your business already relies on to run outreach, engagement, and scheduling autonomously.</p>
+
+        <p>Here is how MILA operates within each part of your Microsoft environment.</p>
+
+        <h2>Outlook – Your Mailbox That Never Stops Working</h2>
+        <p>MILA connects to Outlook through the Microsoft Graph API, operating on your mailbox with delegated, permission-based access – no separate sending domain, no third-party relay.</p>
+        <p>That means every message originates from your own mailbox, preserving sender reputation and domain authentication. MILA monitors the mailbox in real time: when a prospect replies, it interprets the response, determines intent, and replies in context – all from your address, in your voice.</p>
+        <p>Outbound sequences run the same way. Because MILA reads live mailbox activity rather than working off a fixed schedule, follow-up logic responds to actual engagement – opens, replies, or silence – instead of firing on rigid timers. The result is outreach that behaves like a responsive rep, not an automated blast.</p>
+
+        <h2>Dynamics 365 – Your CRM Working the Way It Should</h2>
+        <p>MILA connects to Dynamics 365 through the Graph API using your organization's credentials, reading and writing to the CRM the way a well-briefed team member would.</p>
+        <p>Before engaging a lead, MILA pulls the record – account context, pipeline stage, prior interactions, and notes – and lets that shape the outreach. A contact who stalled on pricing is approached differently from one who went quiet post-demo.</p>
+        <p>Just as importantly, MILA writes back to the CRM as it works. Every sent message, reply, status change, and interaction note is logged automatically, keeping Dynamics current in real time. The gap most teams know well – where CRM data lags days behind actual activity – closes, because the system updating the record is the same system doing the work.</p>
+
+        <h2>Microsoft Calendar – Meetings Booked at Exactly the Right Moment</h2>
+        <p>When a prospect is ready to meet, MILA uses the Graph API to check real-time calendar availability and book the meeting directly – no manual coordination, no scheduling exchange.</p>
+        <p>The prospect receives a confirmed slot while intent is still high. The meeting lands on the right calendar. The window between interest and commitment, where deals often lose momentum, closes automatically.</p>
+
+        <h2>Azure OpenAI – The Intelligence Behind Every Message</h2>
+        <p>The Microsoft integrations give MILA the data. Azure OpenAI is what turns that data into outreach worth responding to.</p>
+        <p>MILA runs each lead's CRM context – role, industry, relationship history, pipeline position – through Azure OpenAI to generate messaging shaped around that specific prospect. Not a merge field on a template, but communication that reflects genuine relevance, which is what actually earns a reply.</p>
+        <p>Running this through Azure OpenAI rather than a public API matters for any business that takes data governance seriously. Everything operates within your own Azure tenant. Prompts and customer data are never used to train the underlying models, and the security and compliance posture you already maintain across Azure extends to MILA's intelligence layer without adding a new surface to manage.</p>
+
+        <h2>What This Looks Like in Practice</h2>
+        <p>The stack does not change. The outcomes do.</p>
+        <p>Leads sitting untouched in Dynamics get worked. Replies land in Outlook overnight because MILA responded while the team was offline. Meetings appear on calendars without a single scheduling email. And the CRM reflects all of it, accurately, without anyone doing end-of-day data entry.</p>
+        <p>MILA does not ask your business to adopt a new environment or move away from the tools it already trusts. It runs inside the Microsoft ecosystem you have already invested in – and turns it into a system that generates pipeline, not just manages it.</p>
+
+        <h2>Getting Started</h2>
+        <p>MILA connects across Outlook, Dynamics 365, Microsoft 365 Calendar, and Azure OpenAI through a setup managed end to end by the One Agentic team – no internal development, no additional Microsoft licensing. Most businesses are operational within one to two weeks.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- MORE FROM BLOG -->
+  <section class="section blog-related reveal">
+    <div class="container">
+      <div class="section-head" style="margin-bottom: 28px;">
+        <h2 class="h2" style="margin: 0;">More from the blog</h2>
+      </div>
+      <div class="blog-grid">
+        <a href="blog-detail.html" class="blog-card">
+          <div class="blog-card-media">
+            <img src="images/blog-microsoft-setup-mila.png" alt="MILA connected to Microsoft Outlook, Dynamics 365, Teams, and Azure">
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-tag">AI SDR · Microsoft</span>
+            <h3>Your Microsoft Setup Can Do More With MILA. Here's How.</h3>
+            <p>MILA works across Outlook, Dynamics 365, Microsoft Calendar, and Azure OpenAI — using the Microsoft stack you already rely on.</p>
+            <span class="blog-read-more">Read article →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <a href="index.html" class="foot-brand-link">
+            <span class="brand-logo">
+              <img src="images/OneAgentiq-logo-light.png?v=20260727" alt="OneAgentiq">
+            </span>
+          </a>
+          <p class="foot-desc">OneAgentiq is designed to revolution<br>how businesses operate.</p>
+        </div>
+        <div class="foot-col">
+          <h5 class="foot-col-title">Info</h5>
+          <a href="index.html">About Us</a>
+          <a href="index.html#features">Capabilities</a>
+          <a href="blog.html">Blog</a>
+          <a href="index.html#faq">FAQ</a>
+        </div>
+        <div class="foot-col">
+          <h5 class="foot-col-title">Solutions</h5>
+          <a href="ai-sdr.html">AI SDR</a>
+          <a href="ai-chatbot.html">AI Chatbot</a>
+          <a href="invoice-processing.html">Invoice Processing</a>
+        </div>
+        <div class="foot-col">
+          <h5 class="foot-col-title">Company</h5>
+          <a href="contact.html">Contact Us</a>
+          <a href="privacy-policy.html">Privacy policy</a>
+          <a href="terms-conditions.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>&copy; 2026 OneAgentiq. All rights reserved</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script>
+    window.CHATBOT_CONFIG = {
+      apiUrl: 'api/attachment.php',
+      voiceBootstrapUrl: 'api/voice_bootstrap.php',
+      voiceApiBase: 'https://voice.oneagentiq.com',
+      agentId: 'vc_agent_fcf07ddb25054de0',
+      echoCancellation: true,
+      clientJsUrl: 'https://voice.oneagentiq.com/voice-chat/client.js',
+      botName: 'OneAgentiq',
+      personName: 'ME'
+    };
+  </script>
+  <script src="chatbot/embed.js"></script>
+</body>
+
+</html>
