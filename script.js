@@ -82,11 +82,13 @@ if (isSdrPage) {
     track.style.transform = `translateX(-${current * cardWidth}px)`;
   }
 
-  document.getElementById('wsNext').addEventListener('click', () => {
+  var wsNext = document.getElementById('wsNext');
+  var wsPrev = document.getElementById('wsPrev');
+  if (wsNext) wsNext.addEventListener('click', () => {
     current = Math.min(current + 1, maxIndex());
     slide();
   });
-  document.getElementById('wsPrev').addEventListener('click', () => {
+  if (wsPrev) wsPrev.addEventListener('click', () => {
     current = Math.max(current - 1, 0);
     slide();
   });
@@ -477,7 +479,7 @@ document.querySelectorAll('.faq-item').forEach(item => {
     }
 
     btn.disabled = false;
-    btn.innerHTML = "Book a Demo &rarr;";
+    btn.innerText = "Book a Demo →";
   });
 })();
 
@@ -487,4 +489,208 @@ document.querySelectorAll('.faq-item').forEach(item => {
 
 
 
-// ===== chatbot js ======
+// ===== WHY OneAgentiq — scroll + click + stacking tabs =====
+(function () {
+  function initOaWhy() {
+    var section = document.getElementById("oa-why");
+    if (!section || section.dataset.oaWhyReady === "1") return;
+    section.dataset.oaWhyReady = "1";
+
+    var track = section.querySelector(".oa-why-track");
+    var viewport = section.querySelector(".oa-why-steps-viewport");
+    var stepsWrap = section.querySelector(".oa-why-steps");
+    var steps = Array.prototype.slice.call(section.querySelectorAll(".oa-why-step"));
+    var panels = Array.prototype.slice.call(section.querySelectorAll(".oa-why-panel"));
+    if (!track || !viewport || !stepsWrap || !steps.length || !panels.length) return;
+
+    var index = 0;
+    var lockScroll = false;
+    var ticking = false;
+    var isMobile = function () {
+      return window.matchMedia("(max-width: 900px)").matches;
+    };
+
+    /**
+     * Keep past tabs stacked & visible at the top.
+     * Only nudge the list up if active would sit too low —
+     * never scroll past tabs fully out of view.
+     */
+    function layoutStack(activeIndex) {
+      if (isMobile()) {
+        stepsWrap.style.transform = "none";
+        return;
+      }
+
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          var vh = viewport.clientHeight;
+          var activeEl = steps[activeIndex];
+          if (!activeEl) return;
+
+          var stackTop = activeIndex > 0 ? steps[0].offsetTop : 0;
+          var activeTop = activeEl.offsetTop;
+          var activeBottom = activeTop + activeEl.offsetHeight;
+
+          // Leave room for bottom blur fade (~88px)
+          var safeBottom = vh - 72;
+          var y = 0;
+
+          if (activeBottom > safeBottom) {
+            y = activeBottom - safeBottom;
+          }
+
+          // Never hide the stacked past tabs: keep at least ~8px of stack at top
+          var maxY = Math.max(0, activeTop - stackTop - 8);
+          if (y > maxY) y = maxY;
+
+          // When starting (step 0), pin to top
+          if (activeIndex === 0) y = 0;
+
+          stepsWrap.style.transform = "translate3d(0, " + (-y) + "px, 0)";
+        });
+      });
+    }
+
+    function applyStep(next) {
+      index = Math.max(0, Math.min(steps.length - 1, next));
+      steps.forEach(function (btn, n) {
+        var on = n === index;
+        btn.classList.toggle("is-active", on);
+        btn.classList.toggle("is-past", n < index);
+        btn.classList.toggle("is-future", n > index);
+        btn.setAttribute("aria-selected", on ? "true" : "false");
+      });
+      panels.forEach(function (panel, n) {
+        panel.classList.toggle("is-active", n === index);
+      });
+      layoutStack(index);
+    }
+
+    function scrollToStep(i) {
+      if (isMobile()) return;
+      lockScroll = true;
+      var rect = track.getBoundingClientRect();
+      var top = window.pageYOffset + rect.top;
+      var scrollable = Math.max(1, track.offsetHeight - window.innerHeight);
+      var target = top + (i / Math.max(1, steps.length - 1)) * scrollable;
+      window.scrollTo({ top: target, behavior: "smooth" });
+      window.setTimeout(function () { lockScroll = false; }, 850);
+    }
+
+    function setStep(i, fromClick) {
+      var next = Math.max(0, Math.min(steps.length - 1, i));
+      if (next === index && !fromClick) return;
+      applyStep(next);
+      if (fromClick) scrollToStep(next);
+    }
+
+    function onScroll() {
+      if (lockScroll || isMobile()) return;
+
+      var rect = track.getBoundingClientRect();
+      var scrollable = Math.max(1, track.offsetHeight - window.innerHeight);
+      var progressed = Math.min(scrollable, Math.max(0, -rect.top));
+      var ratio = progressed / scrollable;
+
+      var i = Math.min(
+        steps.length - 1,
+        Math.max(0, Math.round(ratio * (steps.length - 1)))
+      );
+      setStep(i, false);
+    }
+
+    function requestScrollUpdate() {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(function () {
+        ticking = false;
+        onScroll();
+      });
+    }
+
+    section.addEventListener("click", function (e) {
+      var btn = e.target.closest(".oa-why-step");
+      if (!btn || !section.contains(btn)) return;
+      e.preventDefault();
+      var i = parseInt(btn.getAttribute("data-step"), 10);
+      if (isNaN(i)) i = steps.indexOf(btn);
+      if (i < 0) return;
+      setStep(i, true);
+    });
+
+    window.addEventListener("scroll", requestScrollUpdate, { passive: true });
+    window.addEventListener("resize", function () {
+      layoutStack(index);
+      requestScrollUpdate();
+    });
+    applyStep(0);
+    onScroll();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initOaWhy);
+  } else {
+    initOaWhy();
+  }
+})();
+
+// ===== On-demand AI Agents — vertical scroll → horizontal move =====
+(function () {
+  function initOaAgents() {
+    var section = document.querySelector(".oa-agents-section");
+    if (!section || section.dataset.oaAgentsReady === "1") return;
+    section.dataset.oaAgentsReady = "1";
+
+    var track = section.querySelector(".oa-agents-track");
+    var rail = section.querySelector(".oa-agents-rail");
+    var row = document.getElementById("oaAgentsRow") || section.querySelector(".oa-agents-row");
+    if (!track || !rail || !row) return;
+
+    var ticking = false;
+
+    function isMobile() {
+      return window.matchMedia("(max-width: 900px)").matches;
+    }
+
+    function maxShift() {
+      var cs = window.getComputedStyle(rail);
+      var padL = parseFloat(cs.paddingLeft) || 0;
+      var padR = parseFloat(cs.paddingRight) || 0;
+      var visible = Math.max(1, rail.clientWidth - padL - padR);
+      return Math.max(0, row.scrollWidth - visible);
+    }
+
+    function onScroll() {
+      if (isMobile()) {
+        row.style.transform = "none";
+        return;
+      }
+
+      var rect = track.getBoundingClientRect();
+      var scrollable = Math.max(1, track.offsetHeight - window.innerHeight);
+      var progressed = Math.min(scrollable, Math.max(0, -rect.top));
+      var ratio = progressed / scrollable;
+      row.style.transform = "translate3d(" + (-ratio * maxShift()) + "px, 0, 0)";
+    }
+
+    function requestUpdate() {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () {
+        ticking = false;
+        onScroll();
+      });
+    }
+
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
+    window.addEventListener("load", requestUpdate);
+    onScroll();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initOaAgents);
+  } else {
+    initOaAgents();
+  }
+})();
