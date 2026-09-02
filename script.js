@@ -1,3 +1,41 @@
+// Calendly popup (waits for async widget script)
+(function () {
+  const CALENDLY_URL = 'https://calendly.com/technologymindz/book-a-demo';
+
+  function openCalendly(event) {
+    if (event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    if (window.Calendly && typeof Calendly.initPopupWidget === 'function') {
+      Calendly.initPopupWidget({ url: CALENDLY_URL });
+      return;
+    }
+    let attempts = 0;
+    const wait = setInterval(() => {
+      attempts++;
+      if (window.Calendly && typeof Calendly.initPopupWidget === 'function') {
+        clearInterval(wait);
+        Calendly.initPopupWidget({ url: CALENDLY_URL });
+      } else if (attempts >= 50) {
+        clearInterval(wait);
+        window.open(CALENDLY_URL, '_blank', 'noopener,noreferrer');
+      }
+    }, 100);
+  }
+
+  window.openCalendlyDemo = function (event) {
+    openCalendly(event);
+    return false;
+  };
+
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('[data-calendly]');
+    if (!trigger) return;
+    openCalendly(e);
+  });
+})();
+
 // Mobile nav
 const t = document.getElementById('navToggle');
 const m = document.getElementById('navMobile');
@@ -693,4 +731,90 @@ document.querySelectorAll('.faq-item').forEach(item => {
   } else {
     initOaAgents();
   }
+})();
+
+// Hero video — compact custom controls
+(function () {
+  var video = document.getElementById("heroVideo");
+  var playBtn = document.getElementById("heroVideoPlay");
+  var muteBtn = document.getElementById("heroVideoMute");
+  var fsBtn = document.getElementById("heroVideoFs");
+  var seek = document.getElementById("heroVideoSeek");
+  var timeEl = document.getElementById("heroVideoTime");
+  if (!video || !playBtn || !muteBtn || !fsBtn || !seek || !timeEl) return;
+
+  function formatTime(seconds) {
+    if (!isFinite(seconds)) return "0:00";
+    var m = Math.floor(seconds / 60);
+    var s = Math.floor(seconds % 60);
+    return m + ":" + (s < 10 ? "0" : "") + s;
+  }
+
+  function updateTime() {
+    var cur = formatTime(video.currentTime);
+    var dur = formatTime(video.duration);
+    timeEl.textContent = dur === "0:00" ? cur : cur + " / " + dur;
+    if (video.duration) {
+      seek.value = String((video.currentTime / video.duration) * 100);
+    }
+  }
+
+  function setPlayState() {
+    var playing = !video.paused;
+    var icon = playBtn.querySelector("i");
+    playBtn.setAttribute("aria-label", playing ? "Pause video" : "Play video");
+    if (icon) icon.className = playing ? "fa-solid fa-pause" : "fa-solid fa-play";
+  }
+
+  function setMuteState() {
+    var icon = muteBtn.querySelector("i");
+    muteBtn.setAttribute("aria-label", video.muted ? "Unmute video" : "Mute video");
+    if (icon) icon.className = video.muted ? "fa-solid fa-volume-xmark" : "fa-solid fa-volume-high";
+  }
+
+  playBtn.addEventListener("click", function () {
+    if (video.paused) video.play().catch(function () {});
+    else video.pause();
+    setPlayState();
+  });
+
+  muteBtn.addEventListener("click", function () {
+    video.muted = !video.muted;
+    if (!video.muted) video.volume = 1;
+    setMuteState();
+  });
+
+  fsBtn.addEventListener("click", function () {
+    var wrap = video.closest(".dash-card-video");
+    var target = wrap && wrap.requestFullscreen ? wrap : video;
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+      return;
+    }
+    if (target.requestFullscreen) target.requestFullscreen();
+    else if (video.webkitEnterFullscreen) video.webkitEnterFullscreen();
+  });
+
+  seek.addEventListener("input", function () {
+    if (!video.duration) return;
+    video.currentTime = (Number(seek.value) / 100) * video.duration;
+    updateTime();
+  });
+
+  video.addEventListener("timeupdate", updateTime);
+  video.addEventListener("loadedmetadata", updateTime);
+  video.addEventListener("play", setPlayState);
+  video.addEventListener("pause", setPlayState);
+  video.addEventListener("volumechange", setMuteState);
+
+  document.addEventListener("fullscreenchange", function () {
+    var icon = fsBtn.querySelector("i");
+    var isFs = !!document.fullscreenElement;
+    fsBtn.setAttribute("aria-label", isFs ? "Exit fullscreen" : "Enter fullscreen");
+    if (icon) icon.className = isFs ? "fa-solid fa-compress" : "fa-solid fa-expand";
+  });
+
+  setPlayState();
+  setMuteState();
+  updateTime();
 })();

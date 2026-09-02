@@ -3,9 +3,10 @@
 <title>Contact — Syntra</title>
 <meta name="description" content="Get in touch with the Syntra team. We usually reply within a few hours."/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20260727b"/>
+<link rel="stylesheet" href="styles.css?v=20260902"/>
 <link rel="stylesheet" href="chatbot/chatbot.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 </head><body class="contact-page">
 
   <!-- NAVBAR -->
@@ -17,7 +18,7 @@
         </span>
       </a>
       <ul class="nav-links">
-        <li><a href="./">About</a></li>
+        <li><a href="./">Home</a></li>
         <li class="nav-has-dropdown">
           <a href="#" class="nav-dropdown-toggle">Solutions <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="display:inline-block;vertical-align:middle;margin-left:3px"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <ul class="nav-dropdown">
@@ -30,14 +31,14 @@
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
       <div class="nav-cta">
-        <a href="contact.html" class="btn btn-primary" style="padding: 10px 22px;">Get Started</a>
+        <a href="#" data-calendly class="btn btn-primary" style="padding: 10px 22px;">Get Started</a>
       </div>
       <button class="nav-toggle" aria-label="Menu" id="navToggle">
         <span></span><span></span><span></span>
       </button>
     </nav>
     <div class="nav-mobile" id="navMobile">
-      <a href="./">About</a>
+      <a href="./">Home</a>
       <div class="nav-mobile-dropdown">
         <button type="button" class="nav-mobile-dropdown-toggle" aria-expanded="false">
           Solutions
@@ -51,7 +52,7 @@
       </div>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact Us</a>
-      <a href="contact.html" class="btn btn-primary">Get Started</a>
+      <a href="#" data-calendly class="btn btn-primary">Get Started</a>
     </div>
   </header>
 
@@ -173,74 +174,78 @@
 </section>
 
   <!-- FAQ -->
-  <section class="section faq-section reveal">
-    <div class="container narrow">
+  <section class="section faq-section reveal" id="faq">
+    <div class="container">
       <div class="faq-head">
         <div class="faq-label">
           <span class="chip-dot"></span>
           Frequently Asked Questions
         </div>
         <h2 class="faq-heading">Frequently Asked Questions</h2>
-        <p class="faq-sub">Get answers to common questions here</p>
       </div>
       <div class="faq-list">
         <div class="faq-item open">
           <button class="faq-q" aria-expanded="true">
-            <span>How quickly can Enterprise AI Platform be deployed?</span>
-            <span class="faq-chevron">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-                <polyline points="6 9 12 15 18 9" />
-              </svg>
-            </span>
+            <span class="faq-toggle" aria-hidden="true"></span>
+            <span class="faq-q-text">How quickly can OneAgentiq Platform be deployed?</span>
           </button>
           <div class="faq-body">
             <div>
-              <p>Enterprise AI Platform is live within 4–8 weeks — faster than industry average. Every agent is pre-built and fully tested, with zero disruption to your existing operations. A dedicated consultant owns the entire process from onboarding to go-live.</p>
+              <p>OneAgentiq Platform is live within 4–8 weeks — faster than industry average. Every agent is pre-built
+                and fully tested, with zero disruption to your existing operations. A dedicated consultant owns the
+                entire process from onboarding to go-live.</p>
             </div>
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
-            <span>Do we need to replace our existing tools and systems?</span>
-            <span class="faq-chevron">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-                <polyline points="6 9 12 15 18 9" />
-              </svg>
-            </span>
+            <span class="faq-toggle" aria-hidden="true"></span>
+            <span class="faq-q-text">Do we need to replace our existing tools and systems?</span>
           </button>
           <div class="faq-body">
             <div>
-              <p>No. Enterprise AI Platform integrates seamlessly with your existing CRM, ERP, databases, and third-party tools. It connects to your current infrastructure — not replace it. Your teams continue working in familiar systems while AI handles the intelligence layer.</p>
+              <p>No. OneAgentiq Platform integrates seamlessly with your existing CRM, ERP, databases, and third-party
+                tools. It connects to your current infrastructure — not replace it. Your teams continue working in
+                familiar systems while AI handles the intelligence layer.</p>
             </div>
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
-            <span>What if AI models change or better ones become available?</span>
-            <span class="faq-chevron">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-                <polyline points="6 9 12 15 18 9" />
-              </svg>
-            </span>
+            <span class="faq-toggle" aria-hidden="true"></span>
+            <span class="faq-q-text">What if AI models change or better ones become available?</span>
           </button>
           <div class="faq-body">
             <div>
-              <p>The platform is LLM agnostic by design. It dynamically selects the best model for each use case and adapts automatically as the AI landscape evolves. The Technology Mindz team manages all model updates and optimizations — your platform stays best-in-class without any rebuilding on your end.</p>
+              <p>The platform is LLM agnostic by design. It dynamically selects the best model for each use case and
+                adapts automatically as the AI landscape evolves. The Technology Mindz team manages all model updates
+                and optimizations — your platform stays best-in-class without any rebuilding on your end.</p>
             </div>
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
-            <span>Is our data secure on Enterprise AI Platform?</span>
-            <span class="faq-chevron">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-                <polyline points="6 9 12 15 18 9" />
-              </svg>
-            </span>
+            <span class="faq-toggle" aria-hidden="true"></span>
+            <span class="faq-q-text">Is our data secure on OneAgentiq Platform?</span>
           </button>
           <div class="faq-body">
             <div>
-              <p>Yes. The platform is SOC2 certified and ISO 27001 compliant with enterprise-grade security built in. For regulated industries, private LLM deployment is available — your data stays entirely within your environment and is never shared externally.</p>
+              <p>Yes. The platform is SOC2 certified and ISO 27001 compliant with enterprise-grade security built in.
+                For regulated industries, private LLM deployment is available — your data stays entirely within your
+                environment and is never shared externally.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span class="faq-toggle" aria-hidden="true"></span>
+            <span class="faq-q-text">What does "pay after results" mean?</span>
+          </button>
+          <div class="faq-body">
+            <div>
+              <p>There is no upfront cost to get started. Every agent is pre-built, tested, and deployed — you see
+                measurable results first. Payment follows once your business benefits. This is outcome-based pricing
+                designed to eliminate financial risk from AI adoption entirely.</p>
             </div>
           </div>
         </div>
@@ -335,4 +340,5 @@
   };
 </script>
 <script src="chatbot/embed.js"></script>
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </body></html>

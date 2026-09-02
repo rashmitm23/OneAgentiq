@@ -10,9 +10,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260827a" />
+  <link rel="stylesheet" href="styles.css?v=20260901d" />
   <link rel="stylesheet" href="chatbot/chatbot.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 </head>
 
 <body>
@@ -26,7 +27,7 @@
         </span>
       </a>
       <ul class="nav-links">
-        <li><a href="./">About</a></li>
+        <li><a href="./">Home</a></li>
         <li class="nav-has-dropdown">
           <a href="#" class="nav-dropdown-toggle">Solutions <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
               style="display:inline-block;vertical-align:middle;margin-left:3px">
@@ -43,14 +44,14 @@
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
       <div class="nav-cta">
-        <a href="contact.html" class="btn btn-primary" style="padding: 10px 22px;">Get Started</a>
+        <a href="#" data-calendly class="btn btn-primary" style="padding: 10px 22px;">Get Started</a>
       </div>
       <button class="nav-toggle" aria-label="Menu" id="navToggle">
         <span></span><span></span><span></span>
       </button>
     </nav>
     <div class="nav-mobile" id="navMobile">
-      <a href="./">About</a>
+      <a href="./">Home</a>
       <div class="nav-mobile-dropdown">
         <button type="button" class="nav-mobile-dropdown-toggle" aria-expanded="false">
           Solutions
@@ -67,7 +68,7 @@
       </div>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact Us</a>
-      <a href="contact.html" class="btn btn-primary">Get Started</a>
+      <a href="#" data-calendly class="btn btn-primary">Get Started</a>
     </div>
   </header>
 
@@ -96,27 +97,41 @@
       </div>
       <div style="position: relative;
     z-index: 1;">
-        <div class="hero-badge"><span class="hero-badge-new">INTRODUCING</span><span class="hero-badge-text">OneAgentiq.
-            AI That Works As One.</span></div>
+        <div class="hero-badge"><span class="hero-badge-new">INTRODUCING</span><span class="hero-badge-text"> AI Agents That Work As One
+          </span></div>
         <h1 class="h1">Stop Adding AI Tools. Start Putting AI to Work.</h1>
         <p class="sub">OneAgentiq brings intelligent agents, business systems, and workflows together to automate repetitive work and help your teams focus on what moves the business forward.</p>
         <div class="hero-cta">
           <a href="#oa-why" class="btn btn-white">Learn More</a>
-          <a href="contact.html" class="btn btn-primary">Book a Demo &rarr;</a>
+          <a href="#" data-calendly class="btn btn-primary">Book a Demo &rarr;</a>
         </div>
 
         <!-- Hero Video -->
         <div class="dash-card">
-          <video src="images/enterprise-vd.mp4" class="hero-diagram-img hero-diagram-video float-y" autoplay muted loop
-            playsinline aria-label="Enterprise AI Platform demo">
-          </video>
+          <div class="dash-card-video">
+            <video id="heroVideo" src="images/enterprise-vd.mp4" class="hero-diagram-img hero-diagram-video float-y" autoplay muted loop
+              playsinline aria-label="Enterprise AI Platform demo"></video>
+            <div class="dash-video-controls">
+              <button type="button" class="dash-video-btn" id="heroVideoPlay" aria-label="Pause video">
+                <i class="fa-solid fa-pause" aria-hidden="true"></i>
+              </button>
+              <input type="range" class="dash-video-seek" id="heroVideoSeek" min="0" max="100" value="0" step="0.1" aria-label="Seek video">
+              <span class="dash-video-time" id="heroVideoTime">0:00</span>
+              <button type="button" class="dash-video-btn" id="heroVideoMute" aria-label="Unmute video">
+                <i class="fa-solid fa-volume-xmark" aria-hidden="true"></i>
+              </button>
+              <button type="button" class="dash-video-btn" id="heroVideoFs" aria-label="Enter fullscreen">
+                <i class="fa-solid fa-expand" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- WHY ONEAGENTIQ — stacking tabs -->
-  <section class="oa-why-section" id="oa-why">
+  <section class="oa-why-section reveal" id="oa-why">
     <div class="oa-why-track">
       <div class="oa-why-sticky">
         <div class="container oa-why-inner">
@@ -163,16 +178,16 @@
 
             <div class="oa-why-visuals">
               <div class="oa-why-panel is-active" data-panel="0">
-                <img src="images/LLM-agnostic-by-design-image.png" alt="Freedom from vendor lock-in" class="oa-why-img">
+                <img src="images/Freedom-from-vendor-lock-in-image.png" alt="Freedom from vendor lock-in" class="oa-why-img" loading="lazy" decoding="async">
               </div>
               <div class="oa-why-panel" data-panel="1">
-                <img src="images/Unified-intelligence-layer-image.png" alt="One source of truth" class="oa-why-img">
+                <img src="images/One-source-of-truth-image.png" alt="One source of truth" class="oa-why-img" loading="lazy" decoding="async">
               </div>
               <div class="oa-why-panel" data-panel="2">
-                <img src="images/Deployed-in-weeks-not-months-image.png" alt="Results, not pilots" class="oa-why-img">
+                <img src="images/Results-not-pilots-image.png" alt="Results, not pilots" class="oa-why-img" loading="lazy" decoding="async">
               </div>
               <div class="oa-why-panel" data-panel="3">
-                <img src="images/Collaborative-by-design-image.png" alt="Zero-risk adoption" class="oa-why-img">
+                <img src="images/Zero-risk-adoption-image.png" alt="Zero-risk adoption" class="oa-why-img" loading="lazy" decoding="async">
               </div>
             </div>
           </div>
@@ -182,7 +197,7 @@
   </section>
 
   <!-- HOW IT HELPS — horizontal scroll cards -->
-  <section class="oa-agents-section" id="product">
+  <section class="oa-agents-section reveal" id="product">
     <div class="oa-agents-track">
       <div class="oa-agents-sticky">
         <div class="container oa-agents-head">
@@ -193,55 +208,32 @@
         <div class="oa-agents-rail">
           <div class="oa-agents-row" id="oaAgentsRow">
             <article class="oa-agent-card">
-              <div class="oa-agent-visual oa-agent-visual--support">
-                <div class="oa-agent-mock">
-                  <div class="oa-agent-chat">
-                    <span class="oa-agent-chat-label">Unified Intelligence</span>
-                    <div class="oa-agent-bubble">Sales, Support, Finance — same context</div>
-                    <div class="oa-agent-bubble oa-agent-bubble--user">One shared brain</div>
-                  </div>
-                </div>
+              <div class="oa-agent-visual">
+                <img src="images/unified_intelligence_image (3).png" alt="Unified Intelligence" class="oa-agent-img" loading="lazy" decoding="async">
               </div>
               <h3 class="oa-agent-title">Unified Intelligence</h3>
               <p class="oa-agent-desc">Every agent across Sales, Support, and Finance works with the same data, rules, and business context.</p>
             </article>
 
             <article class="oa-agent-card">
-              <div class="oa-agent-visual oa-agent-visual--ops">
-                <div class="oa-agent-mock">
-                  <div class="oa-agent-nodes">
-                    <span>CRM stays in place</span>
-                    <span>ERP stays in place</span>
-                    <span>One intelligent layer</span>
-                  </div>
-                </div>
+              <div class="oa-agent-visual">
+                <img src="images/works_with_your_systems_image (2).png" alt="Works With Your Systems" class="oa-agent-img" loading="lazy" decoding="async">
               </div>
               <h3 class="oa-agent-title">Works With Your Systems</h3>
               <p class="oa-agent-desc">Your CRM, ERP, and existing tools stay in place. ONEAgentIq connects them through one intelligent layer.</p>
             </article>
 
             <article class="oa-agent-card">
-              <div class="oa-agent-visual oa-agent-visual--finance">
-                <div class="oa-agent-mock">
-                  <div class="oa-agent-flow">
-                    <span>Define rules once</span>
-                    <span>Compliance applied</span>
-                    <span>Every interaction</span>
-                  </div>
-                </div>
+              <div class="oa-agent-visual">
+                <img src="images/Your_Rules_Everywhere_image (2).png" alt="Your Rules, Everywhere" class="oa-agent-img" loading="lazy" decoding="async">
               </div>
               <h3 class="oa-agent-title">Your Rules, Everywhere</h3>
               <p class="oa-agent-desc">Define your compliance requirements and business logic once—and apply them consistently across every interaction.</p>
             </article>
 
             <article class="oa-agent-card">
-              <div class="oa-agent-visual oa-agent-visual--lead">
-                <div class="oa-agent-mock">
-                  <div class="oa-agent-report">
-                    <strong>Live dashboard</strong>
-                    <div class="oa-agent-bars oa-agent-bars--wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-                  </div>
-                </div>
+              <div class="oa-agent-visual">
+                <img src="images/Complete_Visibility_image (1).png" alt="Complete Visibility" class="oa-agent-img" loading="lazy" decoding="async">
               </div>
               <h3 class="oa-agent-title">Complete Visibility</h3>
               <p class="oa-agent-desc">One dashboard. Every agent, every decision, every outcome—in real time.</p>
@@ -256,8 +248,8 @@
   <section class="section dark reveal">
     <div class="container">
       <div class="section-head">
-        <div class="chip dark"><span class="chip-dot"></span> Why ONEAGENTIQ </div>
-        <h2 class="h2 light">Why businesses choose OneAgentiq</h2>
+        <div class="chip dark"><span class="chip-dot"></span> Your Advantages </div>
+        <h2 class="h2 light"> What Your Business Gets</h2>
         <p class="sub light">We don't just implement AI. We take full ownership of your outcomes — from day one to long
           after go-live.</p>
       </div>
@@ -273,7 +265,7 @@
         <div class="why-panel active" data-panel="0">
           <div class="why-body">
             <div class="why-text">
-              <p class="why-overline">4–8 WEEKS TO PRODUCTION</p>
+              <p class="why-overline">1–2 WEEKS TO PRODUCTION</p>
               <h3 class="h3 light">Live while others are<br>still planning.</h3>
               <p class="sub light">Faster than industry average with zero disruption to current operations. Your
                 OneAgentiq agents are already delivering results before competitors finish evaluating.</p>
@@ -285,7 +277,7 @@
             </div>
             <div class="why-stat-card">
               <div class="why-stat-inner">
-                <span class="why-stat-num">4–8</span>
+                <span class="why-stat-num">1–2</span>
                 <span class="why-stat-label">WEEKS TO PRODUCTION</span>
                 <span class="why-stat-badge">Fastest in market</span>
               </div>
@@ -544,7 +536,7 @@
             </svg>
           </div>
           <h3 class="transform-cta-heading">One platform.<br>Every department.<br>Total control.</h3>
-          <p class="transform-cta-sub">AI adoption without the risk. Results from day one."
+          <p class="transform-cta-sub">AI adoption without the risk. Results from day one.
           </p>
           <a href="#contact" class="btn btn-primary">Get Started</a>
         </div>
@@ -633,9 +625,13 @@
   <!-- FAQ -->
   <section class="section faq-section reveal" id="faq">
     <div class="container">
-      <div class="section-head faq-head">
-        <div class="chip"><span class="chip-dot"></span> FAQ</div>
-        <h2 class="h2">Frequently Asked Questions</h2>
+      <div class="faq-head">
+        <div class="faq-label">
+          <span class="chip-dot"></span>
+          Frequently Asked Questions
+        </div>
+        <h2 class="faq-heading">Frequently Asked Questions</h2>
+        <!-- <p class="faq-sub">Get answers to common questions here</p> -->
       </div>
       <div class="faq-list">
         <div class="faq-item open">
@@ -715,8 +711,7 @@
           <h2 class="cta-heading">Ready to work faster?</h2>
           <p class="cta-sub">Start your free trial — no credit card required.</p>
           <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-            <a href="contact.html" class="btn btn-ghost cta-btn">Book a demo</a>
-            <a href="contact.html" class="btn btn-primary cta-btn">Get started &rarr;</a>
+            <a href="contact.html" class="btn btn-primary cta-btn">Contact Us &rarr;</a>
           </div>
         </div>
       </div>
@@ -796,8 +791,9 @@
     </div>
   </footer>
 
-  <script src="script.js?v=20260826g"></script>
+  <script src="script.js?v=20260901g"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <script>
     window.CHATBOT_CONFIG = {
       apiUrl: 'api/attachment.php',
