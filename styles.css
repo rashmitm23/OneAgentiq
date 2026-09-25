@@ -266,6 +266,10 @@ ul {
       margin-bottom: 10px;
 }
 
+.oneagentiq-label {
+  text-transform: capitalize;
+}
+
 .chip.dark {
   background: rgba(255, 255, 255, .06);
   border-color: rgba(255, 255, 255, .1);
