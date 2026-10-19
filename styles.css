@@ -3424,7 +3424,7 @@ ul {
 /* Contact info top row */
 .contact-top-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   margin-bottom: 24px;
 }
@@ -3754,6 +3754,116 @@ ul {
   line-height: 1.7;
   max-width: 560px;
   margin: 0 auto 36px;
+}
+.quote-page .sdr-hero-sub {
+  max-width: 700px;
+}
+.quote-page .sdr-hero-inner .sdr-hero-sub + .sdr-hero-sub {
+  margin-top: -20px;
+}
+.quote-page .sdr-hero-sub strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+.quote-flow {
+  list-style: none;
+  margin: 8px auto 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+  position: relative;
+  max-width: 1080px;
+}
+.quote-flow::before {
+  content: "";
+  position: absolute;
+  top: 36px;
+  left: 16%;
+  right: 16%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #c5d5e6 10%, #0f4172 50%, #c5d5e6 90%, transparent);
+}
+.quote-flow-step {
+  margin: 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.quote-flow-marker {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1.5px solid #d5e3f0;
+  box-shadow: 0 10px 28px rgba(15, 65, 114, .1);
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.quote-flow-marker::before {
+  content: "";
+  position: absolute;
+  inset: -9px;
+  border-radius: 50%;
+  border: 1px dashed rgba(15, 65, 114, .32);
+}
+.quote-flow-marker span {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--ink2);
+  letter-spacing: -.02em;
+}
+.quote-flow-step h3 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -.02em;
+  color: #111827;
+  margin: 0 auto 10px;
+  max-width: 280px;
+}
+.quote-flow-step p {
+  margin: 0 auto;
+  max-width: 300px;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #666;
+}
+@media (max-width: 860px) {
+  .quote-flow {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    max-width: 460px;
+  }
+  .quote-flow::before {
+    top: 12px;
+    bottom: 12px;
+    left: 35px;
+    right: auto;
+    width: 2px;
+    height: auto;
+    background: linear-gradient(#c5d5e6, #0f4172, #c5d5e6);
+  }
+  .quote-flow-step {
+    text-align: left;
+    padding-left: 100px;
+    min-height: 72px;
+  }
+  .quote-flow-marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+  }
+  .quote-flow-step h3,
+  .quote-flow-step p {
+    margin-left: 0;
+    max-width: none;
+  }
 }
 .sdr-hero-btns {
   display: flex;
