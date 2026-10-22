@@ -1,4 +1,4 @@
-﻿
+
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 /* === Tokens ===
    Brand theme preview (logo): #0f4172 + #010101
@@ -1197,10 +1197,10 @@ ul {
   .caps-left { position: static }
 }
 
-/* === Why Syntra Section === */
-.why-syntra { padding: 80px 0 }
+/* === Why OneAgentiq Section === */
+.why-oneagentiq { padding: 80px 0 }
 
-.why-syntra-header {
+.why-oneagentiq-header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px;
@@ -1208,13 +1208,13 @@ ul {
   margin-bottom: 48px;
 }
 
-.why-syntra-right {
+.why-oneagentiq-right {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.why-syntra-label {
+.why-oneagentiq-label {
   display: inline-flex;
   align-items: center;
   gap: 7px;
@@ -1230,7 +1230,7 @@ ul {
   box-shadow: var(--shadow)
 }
 
-.why-syntra-h2 {
+.why-oneagentiq-h2 {
   font-size: 48px;
   font-weight: 500;
   line-height: 52px;
@@ -1239,14 +1239,14 @@ ul {
   margin: 0
 }
 
-.why-syntra-desc {
+.why-oneagentiq-desc {
   font-size: 15px;
   color: var(--muted);
   line-height: 1.65;
   margin: 0;
 }
 
-.why-syntra-btn {
+.why-oneagentiq-btn {
   display: inline-flex;
   background: var(--primary);;
   color: #fff;
@@ -1258,11 +1258,11 @@ ul {
   box-shadow: var(--shadow)
 }
 
-.why-syntra-carousel-wrap {
+.why-oneagentiq-carousel-wrap {
   overflow: hidden
 }
 
-.why-syntra-cards {
+.why-oneagentiq-cards {
   display: flex;
   gap: 16px;
   transition: transform .4s cubic-bezier(.4,0,.2,1)
@@ -1355,29 +1355,29 @@ ul {
 }
 
 @media (max-width: 920px) {
-  .why-syntra > .container {
+  .why-oneagentiq > .container {
     display: flex;
     flex-direction: column;
   }
 
-  .why-syntra-header {
+  .why-oneagentiq-header {
     display: contents;
   }
 
-  .why-syntra-right {
+  .why-oneagentiq-right {
     display: contents;
   }
 
-  .why-syntra-left {
+  .why-oneagentiq-left {
     order: 1;
   }
 
-  .why-syntra-desc {
+  .why-oneagentiq-desc {
     order: 2;
     margin-bottom: 0;
   }
 
-  .why-syntra-carousel-wrap {
+  .why-oneagentiq-carousel-wrap {
     order: 3;
   }
 
@@ -1502,7 +1502,7 @@ ul {
   gap: 0;
 }
 
-.case-slide .why-syntra-label {
+.case-slide .why-oneagentiq-label {
   align-self: flex-start;
   width: fit-content;
   margin-bottom: 22px;
@@ -2893,7 +2893,7 @@ ul {
   }
 
   .h2,
-  .why-syntra-h2,
+  .why-oneagentiq-h2,
   .diff-heading,
   .cta-heading {
     font-size: clamp(28px, 5.5vw, 40px) !important;
@@ -3072,11 +3072,11 @@ ul {
     margin-top: 32px;
   }
 
-  .why-syntra {
+  .why-oneagentiq {
     padding: 48px 0;
   }
 
-  .why-syntra-h2 br {
+  .why-oneagentiq-h2 br {
     display: none;
   }
 
@@ -6411,7 +6411,7 @@ ul {
 
 @media (max-width: 767px) {
   .h2,
-  .why-syntra-h2, .faq-heading {
+  .why-oneagentiq-h2, .faq-heading {
     font-size: clamp(30px, 6vw, 36px) !important;
     line-height: 1.2 !important;
   }

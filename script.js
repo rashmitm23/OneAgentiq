@@ -102,7 +102,7 @@ if (isSdrPage) {
   }
 }
 
-// Why Syntra carousel
+// Why OneAgentiq carousel
 (function () {
   const track = document.getElementById('wsCarousel');
   if (!track) return;
