@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quote Automation — One Agentiq</title>
+  <link rel="icon" type="image/png" href="images/site-icon.png?v=7" />
+  <link rel="apple-touch-icon" href="images/site-icon.png?v=7" />
+  <meta name="description" content="Win more opportunities and waste less time. One Agentiq's AI Quote Automation helps your business respond faster, reduce repetitive work, and move from enquiry to opportunity." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261019b" />
+  <link rel="stylesheet" href="chatbot/chatbot.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+</head>
+
+<body class="sdr-page solution-page invoice-page quote-page">
+
+  <!-- NAVBAR -->
+  <header class="nav-wrap">
+    <nav class="nav">
+      <a href="./" class="brand">
+        <span class="brand-logo">
+          <img src="images/OneAgentiq-logo.jpg?v=20260724" alt="OneAgentiq">
+        </span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="./">Home</a></li>
+        <li class="nav-has-dropdown">
+          <a href="#" class="nav-dropdown-toggle">Solutions <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="display:inline-block;vertical-align:middle;margin-left:3px"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <ul class="nav-dropdown">
+            <li><a href="ai-sdr.html">AI SDR <span class="nav-live-pill">Live</span></a></li>
+            <li><a href="ai-chatbot.html">AI Chatbot <span class="nav-live-pill">Live</span></a></li>
+            <li><a href="invoice-processing.html">Invoice Processing <span class="nav-live-pill">Live</span></a></li>
+            <li><a href="quote-automation.html">Quote Automation <span class="nav-live-pill">Live</span></a></li>
+            <li><a href="ai-recruitment.html">AI Recruitment <span class="nav-live-pill">Live</span></a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#" data-calendly class="btn btn-primary" style="padding: 10px 22px;">Get Started</a>
+      </div>
+      <button class="nav-toggle" aria-label="Menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav-mobile" id="navMobile">
+      <a href="./">Home</a>
+      <div class="nav-mobile-dropdown">
+        <button type="button" class="nav-mobile-dropdown-toggle" aria-expanded="false">
+          Solutions
+          <svg class="nav-mobile-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-mobile-dropdown-panel">
+          <a href="ai-sdr.html">AI SDR <span class="nav-live-pill">Live</span></a>
+          <a href="ai-chatbot.html">AI Chatbot <span class="nav-live-pill">Live</span></a>
+          <a href="invoice-processing.html">Invoice Processing <span class="nav-live-pill">Live</span></a>
+          <a href="quote-automation.html">Quote Automation <span class="nav-live-pill">Live</span></a>
+          <a href="ai-recruitment.html">AI Recruitment <span class="nav-live-pill">Live</span></a>
+        </div>
+      </div>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="#" data-calendly class="btn btn-primary">Get Started</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="sdr-hero reveal">
+    <div class="container">
+      <div class="sdr-hero-stage">
+        <svg class="sdr-hero-orbit" viewBox="0 0 900 420" aria-hidden="true">
+          <ellipse cx="450" cy="210" rx="400" ry="175" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 9" />
+        </svg>
+
+        <div class="sdr-hero-icon sdr-hero-icon--phone sdr-icon-float" style="--float-delay: 0s" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+          </svg>
+        </div>
+        <div class="sdr-hero-icon sdr-hero-icon--email sdr-icon-float" style="--float-delay: 1.2s" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </div>
+        <div class="sdr-hero-icon sdr-hero-icon--linkedin sdr-icon-float" style="--float-delay: 0.6s" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+          </svg>
+        </div>
+        <div class="sdr-hero-icon sdr-hero-icon--whatsapp sdr-icon-float" style="--float-delay: 1.8s" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
+          </svg>
+        </div>
+
+        <div class="sdr-hero-inner">
+          <div class="aurora-blob"></div>
+          <div class="chip"><span class="chip-dot"></span> AI Quote Automation</div>
+          <h1 class="sdr-hero-h1">Win More Opportunities.<br>Accelerate Your Growth.</h1>
+          <p class="sdr-hero-sub">Turn customer enquiries into quotes faster. AI Quote Automation by OneAgentiq streamlines quote preparation, reduces manual work, and helps your team focus on winning more business.</p>
+          <div class="sdr-hero-btns">
+            <a href="#" data-calendly class="btn btn-primary">Book a Demo &nbsp;→</a>
+            <a href="#how-it-works" class="btn btn-ghost">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              See How It Works
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY CAPABILITIES -->
+  <section class="section sdr-caps-section reveal">
+    <div class="container">
+      <div class="section-head">
+        <div class="chip"><span class="chip-dot"></span> Features</div>
+        <h2 class="h2">Key Capabilities</h2>
+      </div>
+      <div class="sdr-caps-grid">
+
+        <div class="sdr-cap-card sdr-cap-card--orange">
+          <div class="sdr-cap-head">
+            <div class="sdr-cap-ico sdr-cap-ico--orange">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+            <span class="sdr-cap-dots" aria-hidden="true"></span>
+          </div>
+          <h3>Respond to Customers Faster</h3>
+          <p>Reduce the time spent preparing quotes so your team can get back to customers sooner and keep buying decisions moving.</p>
+        </div>
+
+        <div class="sdr-cap-card sdr-cap-card--purple">
+          <div class="sdr-cap-head">
+            <div class="sdr-cap-ico sdr-cap-ico--purple">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+            </div>
+            <span class="sdr-cap-dots" aria-hidden="true"></span>
+          </div>
+          <h3>Give Your Team Time Back</h3>
+          <p>Spend less time searching for information, entering data, and assembling documents. Give your people more time to build relationships and develop opportunities.</p>
+        </div>
+
+        <div class="sdr-cap-card sdr-cap-card--blue">
+          <div class="sdr-cap-head">
+            <div class="sdr-cap-ico sdr-cap-ico--blue">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+              </svg>
+            </div>
+            <span class="sdr-cap-dots" aria-hidden="true"></span>
+          </div>
+          <h3>Reduce Avoidable Delays</h3>
+          <p>Identify missing information and pending approvals earlier, helping your team resolve issues before they hold up the next step.</p>
+        </div>
+
+        <div class="sdr-cap-card sdr-cap-card--green">
+          <div class="sdr-cap-head">
+            <div class="sdr-cap-ico sdr-cap-ico--green">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4-4.64 4.36A9 9 0 0 1 3.51 15"/>
+              </svg>
+            </div>
+            <span class="sdr-cap-dots" aria-hidden="true"></span>
+          </div>
+          <h3>Make Better Business Decisions</h3>
+          <p>Understand how many quotes are being processed, how long they take, and where work is getting delayed — so you can address bottlenecks before they affect performance.</p>
+        </div>
+
+        <div class="sdr-cap-card sdr-cap-card--pink">
+          <div class="sdr-cap-head">
+            <div class="sdr-cap-ico sdr-cap-ico--pink">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+              </svg>
+            </div>
+            <span class="sdr-cap-dots" aria-hidden="true"></span>
+          </div>
+          <h3>Handle Growth with Greater Efficiency</h3>
+          <p>Manage growing enquiry volumes without allowing repetitive administrative work to become a constant constraint on your sales team.</p>
+        </div>
+
+        <div class="sdr-cap-card sdr-cap-card--amber">
+          <div class="sdr-cap-head">
+            <div class="sdr-cap-ico sdr-cap-ico--amber">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
+              </svg>
+            </div>
+            <span class="sdr-cap-dots" aria-hidden="true"></span>
+          </div>
+          <h3>Improve Quoting Efficiency</h3>
+          <p>AI Quote Automation takes the repetitive work out of the process, helping your team prepare quotes faster while keeping people involved where their judgment and approval matter.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section sdr-setup-section quote-flow-section reveal" id="how-it-works">
+    <div class="container">
+      <div class="section-head">
+        <div class="chip"><span class="chip-dot"></span> Simple Setup</div>
+        <h2 class="h2">A More Efficient Quoting Workflow</h2>
+      </div>
+      <ol class="quote-flow">
+        <li class="quote-flow-step">
+          <div class="quote-flow-marker" aria-hidden="true"><span>01</span></div>
+          <h3>Capture Enquiry Details</h3>
+          <p>Reduce the manual effort involved in gathering customer information and identifying quote requirements.</p>
+        </li>
+        <li class="quote-flow-step">
+          <div class="quote-flow-marker" aria-hidden="true"><span>02</span></div>
+          <h3>Streamline Quote Preparation</h3>
+          <p>Simplify repetitive pricing checks and quote preparation to help your team respond to enquiries faster.</p>
+        </li>
+        <li class="quote-flow-step">
+          <div class="quote-flow-marker" aria-hidden="true"><span>03</span></div>
+          <h3>Review and Approve with Confidence</h3>
+          <p>Keep your team in control, with human judgment and approval where they matter most.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- USE CASES -->
+  <section class="section sdr-use-section reveal">
+    <div class="container">
+      <div class="section-head">
+        <div class="chip"><span class="chip-dot"></span> Use Cases</div>
+        <h2 class="h2 sdr-use-title">Built for <span class="sdr-use-gradient">Real Business Challenges</span></h2>
+      </div>
+
+      <div class="sdr-use-grid">
+
+        <article class="sdr-use-step sdr-use-step--orange">
+          <div class="sdr-use-icon-wrap">
+            <div class="sdr-use-glow"></div>
+            <div class="sdr-use-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/>
+              </svg>
+            </div>
+          </div>
+          <div class="sdr-use-body">
+            <h3>Customer Enquiries</h3>
+            <p>Every customer enquiry is an opportunity to grow. Respond faster and keep buying decisions moving.</p>
+          </div>
+        </article>
+
+        <article class="sdr-use-step sdr-use-step--purple">
+          <div class="sdr-use-icon-wrap">
+            <div class="sdr-use-glow"></div>
+            <div class="sdr-use-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="sdr-use-body">
+            <h3>Growing Quote Volumes</h3>
+            <p>Manage growing enquiry volumes without allowing repetitive administrative work to become a constant constraint on your sales team.</p>
+          </div>
+        </article>
+
+        <article class="sdr-use-step sdr-use-step--blue">
+          <div class="sdr-use-icon-wrap">
+            <div class="sdr-use-glow"></div>
+            <div class="sdr-use-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="sdr-use-body">
+            <h3>Missing Information and Approvals</h3>
+            <p>Identify missing information and pending approvals earlier, helping your team resolve issues before they hold up the next step.</p>
+          </div>
+        </article>
+
+        <article class="sdr-use-step sdr-use-step--green">
+          <div class="sdr-use-icon-wrap">
+            <div class="sdr-use-glow"></div>
+            <div class="sdr-use-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+              </svg>
+            </div>
+          </div>
+          <div class="sdr-use-body">
+            <h3>Quoting Performance</h3>
+            <p>Understand how many quotes are being processed, how long they take, and where work is getting delayed.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="section sdr-why-section reveal">
+    <div class="container">
+      <div class="sdr-why-split">
+        <div class="sdr-why-intro">
+          <div class="chip"><span class="chip-dot"></span> Benefits</div>
+          <h2 class="h2 sdr-why-title">Why Choose This Solution</h2>
+          <p class="sdr-why-intro-desc">Reduce manual quoting effort, accelerate customer responses, and give your team more time to focus on revenue-generating activities. Turn a time-consuming process into a more efficient way to manage business opportunities.</p>
+        </div>
+
+        <div class="sdr-why-marquee-wrap">
+          <div class="sdr-why-marquee-rings" aria-hidden="true"></div>
+          <div class="sdr-why-marquee">
+            <div class="sdr-why-marquee-col sdr-why-marquee-col--down">
+              <div class="sdr-why-marquee-track">
+                <article class="sdr-why-card">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--orange">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--orange">Faster Quote Processing</strong>
+                    <p>Reduce quote processing time by up to 90%, helping your team respond to customer enquiries faster.</p>
+                  </div>
+                </article>
+                <article class="sdr-why-card">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--purple">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--purple">Reduced Manual Effort</strong>
+                    <p>Spend less time gathering information, checking prices, and preparing quote documents.</p>
+                  </div>
+                </article>
+                <article class="sdr-why-card">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--blue">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--blue">Faster Customer Responses</strong>
+                    <p>Get quotes to customers sooner and help keep buying decisions moving.</p>
+                  </div>
+                </article>
+                <article class="sdr-why-card" aria-hidden="true">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--orange">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--orange">Faster Quote Processing</strong>
+                    <p>Reduce quote processing time by up to 90%, helping your team respond to customer enquiries faster.</p>
+                  </div>
+                </article>
+                <article class="sdr-why-card" aria-hidden="true">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--purple">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--purple">Reduced Manual Effort</strong>
+                    <p>Spend less time gathering information, checking prices, and preparing quote documents.</p>
+                  </div>
+                </article>
+                <article class="sdr-why-card" aria-hidden="true">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--blue">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--blue">Faster Customer Responses</strong>
+                    <p>Get quotes to customers sooner and help keep buying decisions moving.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="sdr-why-marquee-col sdr-why-marquee-col--up">
+              <div class="sdr-why-marquee-track">
+                <article class="sdr-why-card">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--red">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--red">Better Operational Visibility</strong>
+                    <p>Track quote volumes, processing time, and pending work to understand where improvements are needed.</p>
+                  </div>
+                </article>
+                <article class="sdr-why-card">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--green">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4-4.64 4.36A9 9 0 0 1 3.51 15"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--green">Greater Team Productivity</strong>
+                    <p>Free up time for customer relationships, sales opportunities, and business growth.</p>
+                  </div>
+                </article>
+                <article class="sdr-why-card">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--violet">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--violet">Fewer Process Delays</strong>
+                    <p>Identify missing information and pending approvals earlier to prevent avoidable bottlenecks.</p>
+                  </div>
+                </article>
+                <article class="sdr-why-card" aria-hidden="true">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--red">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--red">Better Operational Visibility</strong>
+                    <p>Track quote volumes, processing time, and pending work to understand where improvements are needed.</p>
+                  </div>
+                </article>
+                <article class="sdr-why-card" aria-hidden="true">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--green">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4-4.64 4.36A9 9 0 0 1 3.51 15"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--green">Greater Team Productivity</strong>
+                    <p>Free up time for customer relationships, sales opportunities, and business growth.</p>
+                  </div>
+                </article>
+                <article class="sdr-why-card" aria-hidden="true">
+                  <div class="sdr-why-card-ico sdr-why-card-ico--violet">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                  </div>
+                  <div class="sdr-why-card-body">
+                    <strong class="sdr-why-card-stat sdr-why-stat--violet">Fewer Process Delays</strong>
+                    <p>Identify missing information and pending approvals earlier to prevent avoidable bottlenecks.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section reveal">
+    <div class="container">
+      <div class="cta-glow-wrap">
+        <div class="cta-card">
+          <h2 class="cta-heading">Ready to Get Started?</h2>
+          <p class="cta-sub">See how this solution can transform your operations with a personalized demo.</p>
+          <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+            <a href="contact.html" class="btn btn-primary cta-btn">Talk to Sales</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="company">
+    <div class="container">
+      <div class="foot-grid">
+        <!-- Brand col -->
+        <div class="foot-brand">
+          <a href="./" class="brand foot-brand-link">
+            <span class="brand-logo">
+          <img src="images/OneAgentiq-logo-light.png?v=20260727" alt="OneAgentiq">
+        </span>
+          </a>
+          <p class="foot-desc">OneAgentiq is designed to revolution<br>how businesses operate.</p>
+          <!--
+
+                    <div class="foot-socials">
+            <a href="#" class="foot-social" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="#" class="foot-social" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zm2-6a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" />
+              </svg>
+            </a>
+            <a href="#" class="foot-social" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r=".5" fill="currentColor" />
+              </svg>
+            </a>
+            <a href="#" class="foot-social" aria-label="Telegram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" />
+              </svg>
+            </a>
+          </div>
+
+          -->
+        </div>
+        <!-- Info -->
+        <div class="foot-col">
+          <h5 class="foot-col-title">Info</h5>
+          <a href="./">About Us</a>
+          <a href="./#oa-why">Why OneAgentiq</a>
+          <a href="blog.html">Blog</a>
+          <a href="./#product">How it Helps</a>
+          <a href="./#faq">FAQ</a>
+        </div>
+        <!-- Solutions -->
+        <div class="foot-col">
+          <h5 class="foot-col-title">Solutions</h5>
+          <a href="ai-sdr.html">AI SDR</a>
+          <a href="ai-chatbot.html">AI Chatbot</a>
+          <a href="invoice-processing.html">Invoice Processing</a>
+          <a href="quote-automation.html">Quote Automation</a>
+          <a href="ai-recruitment.html">AI Recruitment</a>
+        </div>
+        <!-- Company -->
+        <div class="foot-col">
+          <h5 class="foot-col-title">Company</h5>
+          <a href="contact.html">Contact Us</a>
+          <a href="privacy-policy.html">Privacy policy</a>
+          <a href="terms-conditions.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>&copy; 2026 OneAgentiq. All rights reserved</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script>
+    window.CHATBOT_CONFIG = {
+      apiUrl: 'api/attachment.php',
+      voiceBootstrapUrl: 'api/voice_bootstrap.php',
+      voiceApiBase: 'https://voice.oneagentiq.com',
+      agentId: 'vc_agent_fcf07ddb25054de0',
+      echoCancellation: true,
+      clientJsUrl: 'https://voice.oneagentiq.com/voice-chat/client.js',
+      botName: 'OneAgentiq',
+      personName: 'ME'
+    };
+  </script>
+  <script src="chatbot/embed.js"></script>
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+</body>
+</html>
